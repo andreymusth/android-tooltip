@@ -1,5 +1,6 @@
 package ru.tzkt.tooltip
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -10,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Tooltip(testTextView, "вы все говно").show()
+        Tooltip(testTextView, "вы все говно", Color.RED).show()
 
         testTextView.setOnClickListener {
-            Tooltip(testTextView, "вы все говно").show()
+            Tooltip(testTextView, "вы все говно", Color.RED).show()
         }
     }
 }
