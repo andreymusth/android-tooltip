@@ -6,11 +6,16 @@ import android.view.WindowManager
 import android.widget.PopupWindow
 import android.widget.TextView
 import android.content.Context.WINDOW_SERVICE
+import android.graphics.drawable.Drawable
 import android.util.DisplayMetrics
+import android.graphics.drawable.GradientDrawable
+
+private const val DEFAULT_CORNER_RADIUS = 16f
 
 class Tooltip(
     private val anchor: View,
-    private val message: String
+    private val message: String,
+    private val color: Int
 ) {
 
     private val context = anchor.context
@@ -31,7 +36,9 @@ class Tooltip(
     private fun preparePopup() {
         val toolTipView = LayoutInflater.from(context).inflate(R.layout.tooltip_layout, null)
         val messageTv = toolTipView.findViewById<TextView>(R.id.tvTooltipMessage)
+        messageTv.background = getRoundedRect()
         val tipView = toolTipView.findViewById<View>(R.id.ivTip)
+        tipView.background = Triangle(color)
         tipView.x = anchor.x - getDisplayWidth() / 2 + anchor.width / 2
         messageTv.text = message
         popup.apply {
@@ -39,6 +46,23 @@ class Tooltip(
             isOutsideTouchable = true
         }
         popup.contentView = toolTipView
+    }
+
+    private fun getRoundedRect(): Drawable {
+        val shape = GradientDrawable()
+        shape.shape = GradientDrawable.RECTANGLE
+        shape.cornerRadii = floatArrayOf(
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS,
+            DEFAULT_CORNER_RADIUS
+        )
+        shape.setColor(color)
+        return shape
     }
 
     private fun getDisplayWidth(): Int {
