@@ -4,7 +4,9 @@ This is sample open source library for android. It intended to simplify working 
 
 ## Getting Started
 
-Add gradle dependency to your project `ru.tzkt.tooltip:tooltip:0.0.1`
+### current version 0.0.2
+
+Add gradle dependency to your project `ru.tzkt.tooltip:tooltip:0.0.2`
 
 then it is ready
 
