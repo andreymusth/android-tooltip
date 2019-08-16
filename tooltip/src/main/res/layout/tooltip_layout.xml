@@ -17,8 +17,8 @@
     <androidx.appcompat.widget.AppCompatTextView
             android:layout_marginTop="12dp"
             tools:text="Эта хрень вам точно поможет. Просто нажмите на нее"
-            android:textSize="16sp"
-            android:padding="8dp"
+            android:textSize="18sp"
+            android:padding="16dp"
             android:textColor="@android:color/white"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
