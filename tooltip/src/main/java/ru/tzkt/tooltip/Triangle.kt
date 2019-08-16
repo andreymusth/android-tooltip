@@ -4,7 +4,7 @@ import android.graphics.*
 import android.graphics.drawable.Drawable
 
 class Triangle(
-    private val drawingColor: Int
+    drawingColor: Int
 ) : Drawable() {
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
