@@ -17,7 +17,7 @@ then it is ready
 
 ## Authors
 
-* **Andrey Belous** - *Initial work* - [andreymusth](https://github.com/andreymusth)
+* **Andrey** - *Initial work* - [andreymusth](https://github.com/andreymusth)
 
 ## License
 
