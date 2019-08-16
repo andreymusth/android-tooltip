@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Tooltip(testTextView, "вы все говно", Color.RED).show()
+        Tooltip(testTextView, "PRESS THIS BUTTON PLEASE", Color.BLUE).show()
 
         testTextView.setOnClickListener {
-            Tooltip(testTextView, "вы все говно", Color.RED).show()
+            Tooltip(testTextView, "PRESS THIS BUTTON PLEASE", Color.BLUE).show()
         }
     }
 }
