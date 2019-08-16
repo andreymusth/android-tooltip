@@ -3,7 +3,6 @@ package ru.tzkt.tooltip
 import android.graphics.*
 import android.graphics.drawable.Drawable
 
-
 class Triangle(
     private val drawingColor: Int
 ) : Drawable() {

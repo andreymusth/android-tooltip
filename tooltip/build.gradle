@@ -46,10 +46,10 @@ ext {
 }
 
 ext.versions = [
-        'minSdk'        : 14,
+        'minSdk'        : 16,
         'compileSdk'    : 28,
         'targetSdk'     : 28,
-        'buildTools'    : '28.0.1',
+        'buildTools'    : '28.0.3',
 
         'release'       : libraryVersion,
         'code'          : 18,
